@@ -10,7 +10,7 @@ public class C01_DynamicDriver {
 
     @Test
     public void browserTest(){
-        WebDriverFactory.getDriver().get("https://www.ebay.com");
+        WebDriverFactory.getDriver().get("https://www.facebook.com");
 
     }
 }
