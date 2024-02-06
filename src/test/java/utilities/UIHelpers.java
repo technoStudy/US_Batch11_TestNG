@@ -18,6 +18,8 @@ public class UIHelpers {
         }
     }
 
+
+
     public void screenShot(WebDriver driver)  {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         LocalDateTime timeOfBug = LocalDateTime.now();
