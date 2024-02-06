@@ -28,6 +28,8 @@ public class AutomationExercisePage {
 
     @FindBy (xpath = ("(//p[normalize-space()='Your email or password is incorrect!'])[1]"))
     public WebElement loginIncorrectMessage;
+    @FindBy (xpath = ("(//a[normalize-space()='Logout'])[1]"))
+    public WebElement logoutButton;
 
 
 }
