@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test Suite">
+    <test name="Groups from different classes">
+        <groups>
+            <run>
+                <include name="Smoke"></include> <!-- all integration test will be run -->
+            </run>
+        </groups>
+        <classes>
+            <class name="day15.C02_Groups"></class>
+            <class name="day15.C03_Groups2"></class>
+        </classes>
+    </test>
+</suite>
