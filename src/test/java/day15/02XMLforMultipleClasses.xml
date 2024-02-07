@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test Suite">
+    <test name="Frst xml Test">
+        <classes>
+            <class name="day13.C02_herokuapWebSiteTest"></class>
+            <class name="day15.C01_Exercises"></class>
+            <class name="day13.C01_CreateAccounTestFacebook"></class>
+        </classes>
+    </test>
+</suite>

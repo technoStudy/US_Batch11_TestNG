@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/msezgin/OneDrive - ENDAVA/Desktop/TechnoStudyProject/com.batch11_TestNG/src/test/java/day14/C03_Conditions.java"><classes><class name="day14.C03_Conditions"><methods><include name="startTheEngine"/><include name="driveTheCar"/></methods></class></classes></test></suite>
