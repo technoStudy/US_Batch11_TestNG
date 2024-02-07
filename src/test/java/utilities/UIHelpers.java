@@ -1,10 +1,14 @@
 package utilities;
 
 import org.apache.commons.io.FileUtils;
+import org.checkerframework.checker.index.qual.PolyUpperBound;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -40,6 +44,23 @@ public class UIHelpers {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) WebDriverFactory.getDriver();
         jsExecutor.executeScript("arguments[0].scrollIntoView(true);",element );
     }
+
+    public void clickOnElementJsExecutor(WebElement element){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) WebDriverFactory.getDriver();
+        jsExecutor.executeScript("arguments[0].click();", element);
+    }
+
+
+    public WebElement waitForVisibility(WebElement element, int timeout){
+        WebDriverWait wait = new WebDriverWait(WebDriverFactory.getDriver(), Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public WebElement waitForClickAblitiy(WebElement element, int timeout){
+        WebDriverWait wait = new WebDriverWait(WebDriverFactory.getDriver(), Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
 
 
 }
