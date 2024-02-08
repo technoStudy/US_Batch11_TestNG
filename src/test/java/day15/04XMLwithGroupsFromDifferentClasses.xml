@@ -7,9 +7,11 @@
                 <include name="Smoke"></include> <!-- all integration test will be run -->
             </run>
         </groups>
+
         <classes>
             <class name="day15.C02_Groups"></class>
             <class name="day15.C03_Groups2"></class>
+
         </classes>
     </test>
 </suite>

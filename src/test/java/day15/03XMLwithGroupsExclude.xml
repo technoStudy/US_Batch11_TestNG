@@ -2,11 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Smoke Test Suite">
     <test name="Groups and Exclude with Group">
+
         <groups>
             <run>
                 <include name="Integration"></include> <!-- all integration test will be run -->
             </run>
         </groups>
+
         <classes>
             <class name="day15.C02_Groups">
                 <methods>
