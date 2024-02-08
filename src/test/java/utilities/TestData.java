@@ -26,6 +26,25 @@ public class TestData {
     }
 
 
+    // name, email,password,First name, Last Name, Company, Address, Country,state,city,zipcode,mobileNo
+    @DataProvider(name = "createAccountAutomationExercise")
+    public Object [][] createAccount(){
+        Object[][] testDate = {
+                {"Aliye","alye@gmail.com","1234","Aliye","Candir","GermanIT","Munich","Canada","Munich","Munich","1234","1234"},
+                {"Aziza","azza@gmail.com","1234","Aziza","Khu","Apple","NW","United States","NW","NW","1234","1234"},
+                {"Hamza","haza@gmail.com","1234","hamza","Gokce","Siemens","Tokyo","Canada","Tokyo","Tokyo","1234","1234"},
+                {"Hanna","hana@gmail.com","1234","Hanna","Kvitko","Philips","WDC","United States","WDC","WDC","1234","1234"},
+                {"Ogulcan","ogucan@gmail.com","1234","Ogulcan","Erdem","Samsung","Sydney","Canada","Sydney","Sydney","1234","1234"},
+                {"Oguzhan","oguhan@gmail.com","1234","Oguzhan","Erdem","Samsung","Sydney","United States","Sydney","Sydney","1234","1234"},
+                {"Sahin","sain@gmail.com","1234","Sahin","Kaya","Nokia","Helsinki","Canada","Helsinki","Helsinki","1234","1234"},
+                {"Tetiana","tetina@gmail.com","1234","Tetiana","Khok","Apple","NW","United States","NW","NW","1234","1234"},
+                {"Polina","polna@gmail.com","1234","Polina","Khus","Apple","NW","United States","NW","NW","1234","1234"},
+                {"Khalid","halid@gmail.com","1234","Khalid","Ahmed","Apple","NW","United States","NW","NW","1234","1234"},
+        };
+        return testDate ;
+    }
+
+
 
 
 
