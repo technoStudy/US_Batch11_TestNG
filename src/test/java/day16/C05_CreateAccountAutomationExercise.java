@@ -20,7 +20,7 @@ public class C05_CreateAccountAutomationExercise {
     }
 
     // name, email,password,First name, Last Name, Company, Address, Country,state,city,zipcode,mobileNo
-    @Test(dataProvider = "createAccountAutomationExercise",dataProviderClass = TestData.class)
+    @Test(dataProvider = "accountAutomationExercise",dataProviderClass = TestData.class)
     public void createUser(String name, String email,String password,String firsname,String lastname,String company,
                            String address, String country,String state,String city,String zipcode,String mobile){
         exercisePage.loginSignUpButton.click();
@@ -48,6 +48,8 @@ public class C05_CreateAccountAutomationExercise {
         exercisePage.mobileNoSignUpTextBox.sendKeys(mobile);
         UIHelpers.waitInSeconds(1);
         exercisePage.createAccountSignUpButton.click();
+        UIHelpers.waitInSeconds(1);
+        exercisePage.loginSignUpButton.click();
         UIHelpers.waitInSeconds(1);
         exercisePage.logOutButton.click();
         UIHelpers.waitInSeconds(1);
