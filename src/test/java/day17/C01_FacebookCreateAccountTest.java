@@ -3,6 +3,7 @@ package day17;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.FaceBookPage;
 import utilities.ConfigReader;
 import utilities.TestData;
@@ -25,7 +26,7 @@ public class C01_FacebookCreateAccountTest {
 
     FaceBookPage faceBookPage = new FaceBookPage();
     UIHelpers uiHelpers = new UIHelpers();
-
+    SoftAssert softAssert = new SoftAssert();
     @BeforeMethod
     public void setUp() {
         WebDriverFactory.getDriver().get(ConfigReader.getProperty("facebook"));
@@ -60,7 +61,9 @@ public class C01_FacebookCreateAccountTest {
         UIHelpers.waitInSeconds(1);
         faceBookPage.signUpButton.click();
         UIHelpers.waitInSeconds(1);
-        Assert.assertTrue(faceBookPage.warningTextMessage.isDisplayed());
+
+        softAssert.assertTrue(faceBookPage.warningTextMessage.isDisplayed());
+        softAssert.assertAll();
     }
 
 
