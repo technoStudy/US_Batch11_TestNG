@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import utilities.WebDriverFactory;
 
 public class FaceBookPage {
@@ -47,6 +48,22 @@ public class FaceBookPage {
 
     @FindBy (xpath = ("(//div[@class='_5633 _5634 _53ij'])[1]"))
     public WebElement warningTextMessage ;
+
+
+    // create dynamic click method
+    public void clickElement(WebElement element) {
+        element.click();
+    }
+
+    // create dynamic send keys method
+    public void sendKeys(WebElement element,String key) {
+        element.sendKeys(key);
+    }
+    // create dynamic assertion method
+    public void isDisPlayed(WebElement element) {
+        Assert.assertTrue(element.isDisplayed());
+    }
+
 
 
 

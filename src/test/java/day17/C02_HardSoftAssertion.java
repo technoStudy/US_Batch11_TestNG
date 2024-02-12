@@ -3,12 +3,12 @@ package day17;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pages.FaceBookPage;
 
 public class C02_HardSoftAssertion {
 
     // Assert class is called i the testing World as a hard assertion
     // when the code detects a bug the hard assertion stops immediately, it means the code don't continue
-
     @Test
     public void test01(){
         Assert.assertTrue(5>3);// True
