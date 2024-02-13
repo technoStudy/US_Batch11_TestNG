@@ -8,6 +8,7 @@ import utilities.WebDriverFactory;
 public class AutomationExercisePage {
 
     public AutomationExercisePage(){
+
         PageFactory.initElements(WebDriverFactory.getDriver(),this);
     }
 

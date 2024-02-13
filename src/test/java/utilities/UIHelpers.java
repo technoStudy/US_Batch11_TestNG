@@ -23,8 +23,6 @@ public class UIHelpers {
         }
     }
 
-
-
     public void screenShot(WebDriver driver)  {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         LocalDateTime timeOfBug = LocalDateTime.now();
@@ -63,15 +61,18 @@ public class UIHelpers {
     }
 
     public void selectByVisibleText(WebElement element,String text){
+        //we are using for drop down list
         Select select = new Select(element);
         select.selectByVisibleText(text);
     }
 
 
     public void selectByIndex(WebElement element,int index){
+        //we are using for drop down list
         Select select = new Select(element);
         select.selectByIndex(index);
     }
 
+    // there is no general use that some method should be in the UIHelpers class
 
 }

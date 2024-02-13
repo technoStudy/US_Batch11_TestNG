@@ -9,6 +9,7 @@ import utilities.WebDriverFactory;
 public class FaceBookPage {
 
     public FaceBookPage(){
+
         PageFactory.initElements(WebDriverFactory.getDriver(),this);
     }
 

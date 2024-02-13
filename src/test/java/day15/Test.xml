@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sample Test Xml File"> <!-- Defines a test suite named "Smoke Test Suite"-->
+    <test name="SampleTest"> <!--Defines a test named "First xml Test -->
+
+
+        <classes>
+            <class name="day15.C01_Exercises"></class> <!-- Specifies the class "C01_Exercises"
+             from package day15-->
+        </classes>
+
+
+
+    </test>
+</suite>
