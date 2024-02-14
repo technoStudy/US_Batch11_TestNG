@@ -3,9 +3,12 @@ package utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -38,6 +41,20 @@ public class TestBaseReport {
         extentReports.setSystemInfo("Enviroment", "QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
         extentReports.setSystemInfo("Automation Engineer", "Mehmet Ali Sezgin");
+    }
+
+
+    // after every test method, if there is an error, takes a screen shoot
+    @AfterMethod(alwaysRun = true)
+    public void tearDownMethod(ITestResult result) {
+
+        if (result.getStatus() == ITestResult.FAILURE) { // if it fails
+            extentTest.fail(result.getName());
+            extentTest.fail(result.getThrowable());
+        } else if (result.getStatus() == ITestResult.SKIP) { // if skiped
+            extentTest.skip("Test Case is skipped: " + result.getName()); // Ignores
+        }
+
     }
 
     // to end reporting

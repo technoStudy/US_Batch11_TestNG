@@ -9,9 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class UIHelpers {
 
@@ -38,6 +40,7 @@ public class UIHelpers {
             System.out.println(e.getMessage());
         }
     }
+
 
     public void scrollToElementJsExecutor(WebElement element) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) WebDriverFactory.getDriver();
